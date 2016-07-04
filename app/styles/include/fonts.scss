@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Verdana-Regular';
+  src: url('fonts/Verdana-Regular/Verdana-Regular.eot');
+  src: url('fonts/Verdana-Regular/Verdana-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Verdana-Regular/Verdana-Regular.woff') format('woff'),
+  url('fonts/Verdana-Regular/Verdana-Regular.ttf') format('truetype'),
+  url('fonts/Verdana-Regular/Verdana-Regular.svg#Verdana-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Century-Gothic-Regular';
+  src: url('fonts/Century-Gothic-Regular/Century-Gothic-Regular.eot');
+  src: url('fonts/Century-Gothic-Regular/Century-Gothic-Regular.eot?#iefix') format('embedded-opentype'),
+  url('fonts/Century-Gothic-Regular/Century-Gothic-Regular.woff') format('woff'),
+  url('fonts/Century-Gothic-Regular/Century-Gothic-Regular.ttf') format('truetype'),
+  url('fonts/Century-Gothic-Regular/Century-Gothic-Regular.svg#Century-Gothic-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-vr: "Verdana", 'Verdana-Regular';
+$font-gr: "Century Gothic", 'Century-Gothic-Regular';

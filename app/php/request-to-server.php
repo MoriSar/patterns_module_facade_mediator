@@ -1,0 +1,10 @@
+<option value="Value1">Позиция: сгенерированный</option>
+<option value="Value2">Позиция: ответ</option>
+<option value="Value3">Позиция: сервера</option>
+<option value="Value4">Позиция: содержащий</option>
+<option value="Value5">Позиция: марки и</option>
+<option value="Value6">Позиция: модели</option>
+<option value="Value7">Позиция: а также</option>
+<option value="Value8">Позиция: город</option>
+<option value="Value9">Позиция: вашего</option>
+<option value="Value10">Позиция: расположения</option>

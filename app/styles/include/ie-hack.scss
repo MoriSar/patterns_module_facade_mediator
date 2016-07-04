@@ -1,0 +1,6 @@
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	/* стили только для IE10 */
+	.spares-item {
+		justify-content: flex-start;
+	}
+}

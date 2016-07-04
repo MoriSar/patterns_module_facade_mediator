@@ -1,0 +1,909 @@
+
+/* Start style for acquaintance */
+
+.acquaintance {
+	border: 1px solid #cacaca;
+	outline: #e0e0e0 solid 1px;
+	background: #fff;
+	padding: 30px;
+	position: relative;
+	margin-top: 25px;
+	height: 415px;
+
+	&:before {
+		@include before-img(100%, 100%);
+		top:0;
+		right: 0;
+		background: url(../images/map.png) right no-repeat;
+	}
+
+	&__title {
+		color: #00b9f9;
+		font: 36px $font-gr;
+		margin: 0;
+		position: relative;
+	}
+
+	&-year {
+		background: #00b9f9;
+		position: absolute;
+		width: 200px;
+		top: 93px; // Координаты
+		left: 30px; // Координаты
+		padding: 10px;
+
+		&:before {
+			@include before-img(325px, 1px);
+			background: #00b9f9;
+			left: -7px;
+			top: 0;
+		}
+
+		&__value {
+			color: #fefefe;
+			font: 60px $font-gr;
+			margin: 0;
+			display: inline-block;
+			border-bottom: 1px solid #fcfcfc;
+		}
+
+		&__name {
+			color: #fff;
+			font: 15px $font-gr;
+			display: inline-block;
+		}
+
+		&__text {
+			color: #fff;
+			font: 15px $font-gr;
+			margin: 5px 0 0 0;
+		}
+
+	}
+
+	&-users {
+		position: absolute;
+		top: 265px; // Координаты
+		left: 55px; // Координаты
+		width: 280px;
+
+		&__value {
+			color: #00b9f9;
+			font: 60px $font-gr;
+			margin: 0;
+		}
+
+		&__text {
+			color: #080808;
+			margin: 0;
+			font: 15px $font-gr;
+		}
+
+	}
+
+	&-dismantling {
+		position: absolute;
+		border-radius: 50%;
+		background: #00b9f9;
+		border: 9px solid #fcfcfc;
+		width: 170px;
+		height: 170px;
+		box-sizing: border-box;
+		padding: 0 10px;
+		left: 0; //Координаты 
+		right: 0; //Координаты
+		margin: auto;
+		top: 0;
+		bottom: 0;
+
+		&__value {
+			font: 36px $font-gr;
+			color: #fff;
+			margin: 20px 0 0 0;
+			text-align: center;
+		}
+
+		&__text {
+			margin: 0;
+			color: #fefefe;
+			font: 15px $font-gr;
+			text-align: center;
+		}
+
+	}
+
+	&-service {
+		@extend .acquaintance-dismantling;
+		right: 42px; // Координаты
+		bottom: auto;
+		left: auto; // Координаты
+		top: 50px; // Координаты
+		background: #fefefe;
+		border-color: #00b9f9;
+		width: 180px;
+		height: 180px;
+
+		&__value {
+			@extend .acquaintance-dismantling__value;
+			color: #00b9f9;
+		}
+
+		&__text {
+			@extend .acquaintance-dismantling__text;
+			color: #000;
+		}
+
+	}
+
+	&-visitors {
+		position: absolute;
+		background: #fff;
+		border-left: 4px solid #00b9f9;
+		width: 230px;
+		padding: 7px 12px;
+		box-sizing: border-box;
+		bottom: 80px; // Координаты
+		right: 200px; // Координаты
+		
+		&__text {
+			color: #000000;
+			font: 15px $font-gr;
+			margin: 0;
+		}
+
+	}
+
+	&__information {
+		color: #929292;
+		font: 11px Tahoma;
+		margin: 0;
+		position: absolute;
+		bottom: 10px; // Координаты
+		right: 10px; // Координаты
+	}
+
+}
+/* Finish style for acquaintance */
+
+
+
+/* Start style for proprietor block */
+.proprietor {
+	
+	
+	&__title {
+		color: #3e3e3e;
+		margin: 0 0 20px 0;
+		font: 24px $font-gr;
+		width: 95%;
+	}
+
+	&__text {
+		margin: 20px 0 0 0;
+		color: #050505;
+		font: 15px/24px $font-vr;
+		width: 95%;
+	}
+
+	&__link {
+		color: #0664ce;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+	}
+
+}
+/* Finish style for proprietor block */
+
+/* Start style for advantage block */
+.advantage {
+	background: #00b9f9;
+	box-shadow: inset 0 14px 7px -15px #333,inset 0 -14px 7px -15px #333;
+	margin: 40px 0;
+	position: relative;
+
+	&:before {
+		@include before-img(0, 0);
+		left: 50%;
+		top: 50%;
+		box-shadow: 0 0 150px 110px rgba(255,255,255, .7);
+	}
+
+	&_height {
+		height: 610px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	&__title {
+		margin: 0;
+		color: #fff;
+		font: 30px $font-gr;
+	}
+
+	&-item {
+		position: absolute;
+
+		&__circle {
+			background: #fff;
+			display: flex;
+			border-radius: 50%;
+			margin: 0 auto;
+			box-shadow: 0 0 17px -7px rgba(0,0,0,.75);
+			border: 10px solid rgba(#00b9f9, .75);
+			position: relative;
+
+			&:before {
+				@include before-img(0,0);
+				border-top: 2px dashed transparent;
+			}
+
+		}
+
+		&_phone {
+			width: 130px;
+			top: 320px; // Координаты
+			left: 15px; // Координаты
+
+			.advantage-item__circle {
+				width: 130px;
+				height: 130px;
+
+				&:before {
+					width: 67px;
+					right: -35px;
+					top: -12px;
+					transform: rotate(-51deg);
+					border-color: #fff;
+				}
+
+			}
+
+		}
+
+		&_chart {
+			width: 150px;
+			top: 120px; // Координаты
+			left: 120px; // Координаты
+
+			.advantage-item__circle {
+				width: 150px;
+				height: 150px;
+
+				&:before {
+					width: 67px;
+					right: -27px;
+					bottom: -10px;
+					transform: rotate(51deg);
+					border-color: #fff;
+				}
+
+			}
+
+		}
+
+		&_clock {
+			width: 155px;
+			top: 325px; // Координаты
+			left: 245px; // Координаты
+
+			.advantage-item__circle {
+				width: 155px;
+				height: 155px;
+
+				&:before {
+					width: 205px;
+					right: -160px;
+					top: -39px;
+					transform: rotate(-36deg);
+					border-color: #fff;
+				}
+
+			}
+
+		}
+
+		&_lock {
+			width: 180px;
+			top: 90px; // Координаты
+			left: 0; // Координаты
+			right: 0; // Координаты
+			margin: auto;
+
+			.advantage-item__circle {
+				width: 130px;
+				height: 130px;
+
+				&:before {
+					width: 155px;
+					right: -100px;
+					bottom: -50px;
+					transform: rotate(56deg);
+					border-color: #fff;
+				}
+
+			}
+
+		}
+
+		&_binoculars {
+			width: 150px;
+			top: 360px; // Координаты
+			right: 340px; // Координаты
+
+			.advantage-item__circle {
+				width: 150px;
+				height: 150px;
+
+				&:before {
+					width: 180px;
+					right: -93px;
+					top: -80px;
+					transform: rotate(-65deg);
+					border-color: #fff;
+				}
+
+			}
+
+		}
+
+		&_document {
+			width: 210px;
+			top: 45px; // Координаты
+			right: 160px; // Координаты
+
+			.advantage-item__circle {
+				width: 140px;
+				height: 140px;
+
+				&:before {
+					width: 100px;
+					right: -13px;
+					bottom: -47px;
+					transform: rotate(72deg);
+					border-color: #fff;
+				}
+
+			}
+
+		}
+
+		&_star {
+			width: 130px;
+			top: 320px; // Координаты
+			right: 160px; // Координаты
+
+			.advantage-item__circle {
+				width: 130px;
+				height: 130px;
+
+				&:before {
+					width: 100px;
+					right: -67px;
+					top: -8px;
+					transform: rotate(-40deg);
+					border-color: #fff;
+				}
+
+			}
+
+		}
+
+		&_search {
+			width: 135px;
+			top: 200px; // Координаты
+			margin: auto; // Координаты
+			right: 15px; // Координаты
+
+			.advantage-item__circle {
+				width: 135px;
+				height: 135px;
+			}
+
+		}
+
+		&__img {
+			margin: auto;
+			display: block;
+		}
+
+		&__text {
+			color: #fff;
+			font: 14px $font-vr;
+			margin: 7px 0;
+			text-align: center;
+		}
+
+	}
+
+}
+/* Finish style for advantage block */
+
+
+
+
+
+/* Start responsive style for content */
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+	.acquaintance-visitors {
+		bottom: 43px;
+		right: 140px;
+	}
+
+	.advantage-item_clock {
+
+		.advantage-item__circle {
+
+			&:before {
+				width: 136px;
+				right: -86px;
+				top: -28px;
+				transform: rotate(-51deg);
+			}
+
+		}
+
+	}
+
+	.advantage-item_lock {
+
+		.advantage-item__circle {
+
+			&:before {
+				width: 143px;
+				right: -57px;
+				bottom: -43px;
+				transform: rotate(70deg);
+			}
+
+		}
+
+	}
+
+}
+
+@media (max-width: 992px) {
+
+	.advantage-item__img {
+		width: 40%;
+		height: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+
+	.advantage-item_phone {
+		width: 130px;
+
+		.advantage-item__circle {
+			width: 95px;
+			height: 95px;
+
+			&:before {
+				width: 114px;
+				right: -54px;
+				top: -44px;
+				transform: rotate(-65deg);
+			}
+
+		}
+
+	}
+
+	.advantage-item_chart {
+		width: 150px;
+		top: 100px;
+		left: 60px;
+
+		.advantage-item__circle {
+			width: 115px;
+			height: 115px;
+
+			&:before {
+				right: -27px;
+				bottom: -10px;
+			}
+
+		}
+
+	}
+
+	.advantage-item_clock {
+		width: 155px;
+		top: 270px;
+		left: 160px;
+
+		.advantage-item__circle {
+			width: 110px;
+			height: 110px;
+
+			&:before {
+				width: 123px;
+				right: -80px;
+				top: -14px;
+				transform: rotate(-48deg);
+			}
+
+		}
+
+	}
+
+	.advantage-item_lock {
+		width: 180px;
+		top: 94px;
+
+		.advantage-item__circle {
+			width: 95px;
+			height: 95px;
+
+			&:before {
+				right: -65px;
+				bottom: -56px;
+				transform: rotate(68deg);
+			}
+
+		}
+
+	}
+
+	.advantage-item_binoculars {
+		width: 180px;
+		top: 350px;
+		right: 200px;
+
+		.advantage-item__circle {
+			width: 110px;
+			height: 110px;
+
+			&:before {
+				width: 105px;
+				right: -57px;
+				top: -32px;
+			}
+
+		}
+
+	}
+
+	.advantage-item_document {
+		width: 130px;
+		top: 125px;
+		right: 140px;
+
+		.advantage-item__circle {
+			width: 100px;
+			height: 100px;
+
+			&:before {
+				width: 80px;
+				right: -23px;
+				bottom: -35px;
+				transform: rotate(70deg);
+			}
+
+		}
+
+	}
+
+	.advantage-item_star {
+		width: 130px;
+		top: 350px;
+		right: 80px;
+
+		.advantage-item__circle {
+			width: 80px;
+			height: 80px;
+
+			&:before {
+				right: -27px;
+				bottom: -10px;
+				width: 55px;
+				transform: rotate(-53deg);
+			}
+
+		}
+
+	}
+
+	.advantage-item_search {
+		width: 135px;
+		top: 200px;
+
+		.advantage-item__circle {
+			width: 100px;
+			height: 100px;
+
+		}
+
+	}
+
+	.acquaintance-visitors {
+		right: 50px;
+		bottom: 50px;
+
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+	.advantage_height {
+		height: 540px;
+	}
+
+	.advantage-item {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.advantage-item_search {
+		
+		.advantage-item__circle {
+			order: 1;
+		}
+
+		.advantage-item__text {
+			order: 0;
+		}
+
+	}
+
+}
+
+@media (min-width: 768px) {
+
+	.acquaintance-container {
+		display: block!important;
+
+	}
+
+	.proprietor {
+		display: block!important;
+	}
+
+	.advantage {
+		display: block!important;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	.acquaintance {
+		box-shadow: none;
+		height: auto;
+		padding: 0;
+		border: 0;
+		outline: 0;
+
+		&-container {
+			position: relative;
+			display: none;
+			width: 75%;
+			margin: 0 auto;
+			padding: 0 15px;
+
+			&:after {
+				@include clear-both;
+			}
+
+		}
+
+		&:before {
+			display: none;
+		}
+
+		&__title {
+			color: #54b8f7;
+			text-decoration: underline;
+			cursor: pointer;
+			font: 16px $font-vr;
+			margin: 0 auto 20px auto;
+			display: table;
+			
+			&:hover {
+				text-decoration: none;
+			}
+
+		}
+
+		&-year {
+			position: static;
+			float: left;
+			clear: both;
+		}
+
+		&-visitors {
+			position: static;
+			clear: both;
+			float: right;
+			margin-top: 12px;
+			background: #f7f7f7;
+			border-left: 0;
+			border-right: 4px solid #50afea;
+		}
+
+		&-dismantling {
+			position: static;
+			clear: both;
+			float: right;
+			margin-top: -30px;
+		}
+
+		&-service {
+			position: static;
+			clear: both;
+			margin-top: 12px;
+			float: left;
+		}
+
+		&-users {
+			position: static;
+			clear: both;
+			float: left;
+		}
+
+	}
+
+	.proprietor {
+		display: none;
+	}
+
+	.proprietor__title {
+		margin: 50px 0 10px 0;
+		width: 100%;
+	}
+
+	.proprietor__text {
+		margin: 10px 0 0 0;
+		width: 100%;
+	}
+
+	.advantage {
+		display: none;
+	}
+
+	.advantage-item__circle:before {
+		display: none;
+	}
+
+	.advantage:before {
+		display: none;
+	}
+
+	.advantage-container {
+		width: 65%;
+		margin: 0 auto;
+	}
+
+	.advantage-item {
+		position: static;
+		display: flex;
+		flex-direction: column;
+		
+		&__circle {
+			order: 0;
+		}
+
+		&__text {
+			order: 1;
+		}
+
+	}
+
+
+	.advantage_height {
+		height: auto;
+	}
+
+	.advantage-item_chart {
+		float: left;
+		clear: both;
+
+		.advantage-item__circle {
+			order: 1;
+		}
+
+		.advantage-item__text {
+			order: 0;
+		}
+
+	}
+
+	.advantage-item_phone {
+		float: right;
+		clear: both;
+		margin-top: -50px;
+	}
+
+	.advantage-item_lock {
+		float: left;
+		clear: both;
+		margin-top: -35px;
+	}
+
+	.advantage-item_clock {
+		float: right;
+		clear: both;
+		margin-top: -60px;
+	}
+
+	.advantage-item_document {
+		float: left;
+		clear: both;
+		margin-top: -70px;
+	}
+
+	.advantage-item_binoculars {
+		float: right;
+		clear: both;
+		margin-top: -50px;
+	}
+
+	.advantage-item_star {
+		float: left;
+		clear: both;
+		margin-top: -45px;
+	}
+
+	.advantage-item_search {
+		float: right;
+		clear: both;
+		margin-top: -45px;
+	}
+
+	.advantage__title {
+		font-size: 25px;
+		margin-bottom: 30px;
+	}
+
+	.advantage {
+		margin-bottom: 0;
+	}
+
+}
+
+@media (max-width: 600px) {
+
+	.advantage-container {
+		width: 80%;
+	}
+
+}
+
+@media (max-width: 480px) {
+
+	.advantage-container {
+		width: 100%;
+	}
+
+	.acquaintance-year:before {
+		display: none;
+	}
+
+	.acquaintance-container {
+		width: 100%;
+		position: relative;
+		padding: 0 15px;
+
+		&:before {
+			@include before-img(100%, 1px);
+			background: #00b9f9;
+			top: 0;
+			left: 0;
+		}
+
+	}
+
+}
+
+/* Finish responsive style for content */
+

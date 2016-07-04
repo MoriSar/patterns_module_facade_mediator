@@ -1,0 +1,40 @@
+.map {
+
+	&-container {
+		border: 1px solid #c9c9c9;
+		background: #fff;
+		margin-bottom: 15px;
+		outline: #e0e0e0 solid 1px;
+	}
+
+	&-main {
+		margin: 15px;
+		width: auto;
+		height: 500px;
+	}
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 767px) {
+
+	.map {
+
+		&-container {
+			border: 0;
+			outline: 0;
+		}
+
+		&-main {
+			height: 300px;
+			padding: 0;
+			margin:  15px 0;
+			border: 1px solid #c9c9c9;
+		}
+
+	}
+
+}

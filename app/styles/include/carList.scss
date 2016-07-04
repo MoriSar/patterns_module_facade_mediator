@@ -1,0 +1,74 @@
+/* Start style for car model block */
+
+.carModel {
+	padding: 15px 13px;
+	overflow: hidden;
+
+	&__title {
+		color: #242424;
+		font: 14px $font-vr;
+		margin: 0;
+	}
+
+	&-main {
+		margin-top: 10px; 
+
+		&__list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		&__title {
+			line-height: 30px;
+		}
+
+		&__ico {
+			background: url(../images/carLogo.png) no-repeat;
+			width: 22px;
+			height: 22px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 5px;
+			text-transform: uppercase
+		}
+
+		&__link {
+			color: #636363;
+			font: 14px $font-vr;
+			text-decoration: underline;
+			text-transform: uppercase;
+			display: inline-block;
+			vertical-align: middle;
+
+			&_noUppercase {
+				text-transform: none;
+			}
+
+			&:hover {
+				text-decoration: none;
+				color: #636363;
+			}
+
+		}
+
+	}
+
+}
+
+/* Finish style for car model block */
+
+/* Start responsive style */
+@media (max-width: 767px) {
+
+	.carModel-main__link {
+		font-size: 16px;
+	}
+
+	.carModel {
+		padding: 15px 0;
+	}
+
+}
+
+/* Finish responsive style */

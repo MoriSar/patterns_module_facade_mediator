@@ -1,0 +1,15 @@
+@mixin before-img($width, $height) {
+	content: '';
+	display: block;
+	position: absolute;
+	width: $width;
+	height: $height;
+}
+@mixin clear-both {
+	content: '';
+	display: table;
+	clear: both
+}
+@mixin transition($el, $time: .3s) {
+	transition: $el $time;
+}
