@@ -27,6 +27,7 @@
             $this.next().attr('disabled', '').children().not(':first').remove();
           }
           var ajaxObj;
+          console.log($this.index());
           if ( flag ) {
             ajaxObj = {
               model: (function() {
@@ -84,7 +85,7 @@
           console.log(ajaxObj);
           if ( $this.val() && isObjEmpty() ) {
 
-           $this.next().removeAttr("disabled");
+           $this.next().removeAttr('disabled');
            $.ajax({
             url:  'php/request-to-server.php',
             data: ( ajaxObj ),
@@ -155,7 +156,7 @@
 
         // добавление новой детали 
         
-        var detailBlock = $('.detail-block'); 
+        // var detailBlock = $('.detail-block'); 
         var number = 20; // не бльше 20 деталей
 
         function addDetail($this) {
@@ -170,17 +171,6 @@
 
         }
 
-        function resetDetail() {
-          var detail= $('.detail-input');
-          detail.each(function(i) {
-            console.log(i);
-            if(i == 0) {
-              $(this).find('input').val('');
-            }else {
-              detail[i].remove();
-            }
-          })
-        }
 
         $('.autoParth-step__addDetail'). on('click', function(e) {
           addDetail($(this));
@@ -229,16 +219,17 @@
          * @param  {Object} elemObj - объект формы
          * @param  {Boolean} isEmail - флаг элемента формы Email
          */
+        
          function validateRequestForm(elemObj, isEmail) {
 
-          if (!elemObj.object.val() && elemObj.validStatus && !isEmail) {
-            elemObj.object.removeClass('form__validate-elem_success');
-            elemObj.object.addClass('form__validate-elem');
+          if (!elemObj.object.val() && !isEmail) {
+            elemObj.object.removeClass('form__validate-elem_valid');
+            elemObj.object.addClass('form__validate-elem_invalid');
             elemObj.validStatus = false;
             requestForm__caunter--;
-          } else if (elemObj.object.val() && !elemObj.validStatus && !isEmail){
-            elemObj.object.removeClass('form__validate-elem');
-            elemObj.object.addClass('form__validate-elem_success');
+          } else if (elemObj.object.val() && !isEmail){
+            elemObj.object.removeClass('form__validate-elem_invalid');
+            elemObj.object.addClass('form__validate-elem_valid');
             elemObj.validStatus = true;
             requestForm__caunter++;
           } else if (forEmail.test(elemObj.object.val()) && !elemObj.validStatus &isEmail) {
@@ -254,6 +245,7 @@
           }
           updateProgressBar();
         }
+
         // validateRequestForm()
 
         /**

@@ -19,7 +19,7 @@ MORISAR.namespace = function (ns_string) {
     parent = parent[parts[i]];
   }
   if (!isEmptyProps) {
-    console.warn("Свойство '" + parts.join('.') + "' уже существует!");
+    console.warn('Свойство \'' + parts.join('.') + '\' уже существует!');
   };
   return parent;
 };

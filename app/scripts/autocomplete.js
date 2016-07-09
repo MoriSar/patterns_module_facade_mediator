@@ -8,7 +8,7 @@ $(function() {
         type: 'autocomplete'
       }
       $('.autoParth-step__nameDetails').autocomplete({
-        serviceUrl: 'back/countries.json',
+        serviceUrl: 'php/countries.json',
         minChars: 3,
         type: 'get',
         params: autocomplObj,

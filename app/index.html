@@ -153,7 +153,7 @@
                   <div class="tab-content autoParth-step-tabCont">
                     <div class="tab-pane" id="">
                       <div class="selectContain">
-                        <select class="autoParth-step-tabCont__select select-year  form-control form__validate-elem" name="year" id="request-form__car-year">
+                        <select class="autoParth-step-tabCont__select select-year  form-control form__validate-elem" id="request-form__car-year" name="carYear" data-elemName="Год выпуска" data-validationType="simple">
                           <option value="">Год выпуска</option>
                           <option value="2016">2016</option>
                           <option value="2015">2015</option>
@@ -163,15 +163,15 @@
                           <option value="2011">2011</option>
                           <option value="2010">2010</option>
                         </select>
-                        <select class="autoParth-step-tabCont__select form-control car-brand form__validate-elem" disabled data-path="back/brand-car.php" id="request-form__car-brand">
+                        <select class="autoParth-step-tabCont__select form-control car-brand form__validate-elem" disabled data-path="back/brand-car.php" id="request-form__car-brand" name="carBrand" data-elemName="Марка" data-validationType="simple">
                           <option value="">Выберите марку</option>
                         </select>
-                        <select class="autoParth-step-tabCont__select form-control car-model form__validate-elem" disabled data-path="back/model-car.php" id="request-form__car-model">
+                        <select class="autoParth-step-tabCont__select form-control car-model form__validate-elem" disabled data-path="back/model-car.php" id="request-form__car-model" name="carModel" data-elemName="Модель" data-validationType="simple">
                           <option value="">Выберите модель</option>
                         </select>
                       </div>  
                       <div class="autoParth-step-tabCont__line">
-                        <select name="" id="request-form__l-w-engine" class="form-control autoParth-step-tabCont__engine form__validate-elem">
+                        <select id="request-form__l-w-engine" class="form-control autoParth-step-tabCont__engine form__validate-elem" name="carLWengine" data-elemName="Объем двигателя" data-validationType="simple_grayFlag">
                           <option value="">Объём двигателя:</option>
                           <option value="0.2">0.2</option>
                         </select>
@@ -185,7 +185,7 @@
                 <p class="autoParth-step__info autoParth-step__info_details">Lorem ipsum dolor sit amet, consectetur.</p>
                 <div class="detail-block">
                   <div class="detail-input">
-                      <input placeholder="Название запчасти" type="text" class="autoParth-step__nameDetails form-control form__validate-elem" id="request-form__space-part-name">
+                      <input placeholder="Название запчасти" type="text" class="autoParth-step__nameDetails form-control form__validate-elem" id="request-form__space-part-name" name="spacePartName" data-elemName="Название запчасти" data-validationType="simple">
                       <input placeholder="Комментарии" type="text" class="autoParth-step__comment form-control">
                   </div>
                   <div class="autoParth-step__line">
@@ -199,16 +199,16 @@
                 <div class="contact-block">
                   <div class="contact-inputBox">
                     <div class="contact-inputBox__line">
-                      <select name="" id="request-form__region-name" class="form-control select-region autoParth-step-tabCont__select form__validate-elem">
+                      <select id="request-form__region-name" class="form-control select-region autoParth-step-tabCont__select form__validate-elem" name="regionName" data-elemName="Регион" data-validationType="simple">
                         <option value="">Выберите регион</option>
                         <option value="region1">Регион 1</option>
                         <option value="region2">Регион 2</option>
                       </select>
-                      <select name="" id="request-form__city-name" class="form-control select-city autoParth-step-tabCont__select form__validate-elem" disabled >
+                      <select id="request-form__city-name" class="form-control select-city autoParth-step-tabCont__select form__validate-elem" disabled name="cityName" data-elemName="Город"  data-validationType="simple">
                         <option value="">Выберите город</option>
                       </select>
                     </div>
-                    <input type="text" placeholder="Ваш E-mail" class="form-control form__validate-elem-mail" id="request-form__email">
+                    <input type="text" placeholder="Ваш E-mail" class="form-control form__validate-elem" id="request-form__email" name="email" data-elemName="E-mail"  data-validationType="email">
                     <input type="text" placeholder="Как Вас зовут" class="form-control">
                   </div>
                   <div class="autoParth-step__line">
@@ -553,12 +553,13 @@
     
     <script src="scripts/jquery.autocomplete.min.js"></script>
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    <script src="scripts/query.js"></script>
+    <!-- <script src="scripts/main.js"></script> -->
+    <!-- <script src="scripts/query.js"></script> -->
     <script src="scripts/autocomplete.js"></script>
     <script src="scripts/MORISAR_init.js"></script>
     <script src="scripts/MORISAR.module.scrollTopBtn.js"></script>
     <script src="scripts/MORISAR.module.validationData.js"></script>
+    <script src="scripts/MORISAR.module.validationCore.js"></script>
     <script src="scripts/MORISAR.facade.js"></script>
     <script src="scripts/MORISAR.CORE_mediator.js"></script>
     <!-- endbuild -->

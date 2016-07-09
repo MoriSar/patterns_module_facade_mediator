@@ -37,36 +37,47 @@ MORISAR.CORE_mediator.installTo(MORISAR.facade);
 // Subscribes modules //
 ///////////////////////
 
-MORISAR.facade.subscribe('Document ready', function (obj) {
-	MORISAR.facade.interface__stbInit(obj);
+MORISAR.facade.subscribe('Document ready', function (objConfig) {
+	MORISAR.facade.interface__stbInit(objConfig);
+	MORISAR.facade.interface__startValidation(objConfig);
+});
+
+MORISAR.facade.subscribe('Scroll page', function (objConfig) {
+	MORISAR.facade.interface__stbInit(objConfig);
+});
+
+MORISAR.facade.subscribe('Resize page', function (objConfig) {
+	MORISAR.facade.interface__stbInit(objConfig);
+});
+
+MORISAR.facade.subscribe('Click on scroll button', function (objConfig) {
+	MORISAR.facade.interface__stbInit(objConfig);
+});
+
+MORISAR.facade.subscribe('Change in form', function (objConfig) {
+	MORISAR.facade.interface__startValidation(objConfig);
 })
-
-MORISAR.facade.subscribe('Scroll event', function (obj) {
-	MORISAR.facade.interface__stbInit(obj);
-});
-
-MORISAR.facade.subscribe('Click event', function (obj) {
-	MORISAR.facade.interface__stbInit(obj);
-});
-
-MORISAR.facade.subscribe('Resize event', function (obj) {
-	MORISAR.facade.interface__stbInit(obj);
-});
 
 ////////////////////////
 // Publish to modules //
 ////////////////////////
 
-$(document).ready(MORISAR.facade.publish('Document ready', {}));
+$(document).ready(MORISAR.facade.publish('Document ready', {validationClass: '.form__validate-elem'}));
 
 $(window).on('scroll', function(event) {
-	MORISAR.facade.publish('Scroll event', {eventType: 'Scroll'});
+	MORISAR.facade.publish('Scroll page', {eventType: 'Scroll'});
 });
 
 $(window).on('resize', function(event) {
-	MORISAR.facade.publish('Resize event', {eventType: 'Resize'});
+	MORISAR.facade.publish('Resize page', {eventType: 'Resize'});
 });
 
 MORISAR.module.scrollTopBtn.stbM__button().on('click', function(event) {
-	MORISAR.facade.publish('Click event', {eventType: 'Click'});
+	event.preventDefault();
+	MORISAR.facade.publish('Click on scroll button', {eventType: 'Click'});
+});
+
+$('.autoParth-box').on('change', function(event) {
+	event.preventDefault();
+	MORISAR.facade.publish('Change in form', {});
 });

@@ -714,11 +714,11 @@ body {
 
 
 // стили для формы на страницах
-.form__validate-elem,.form__validate-elem-mail {
-	border: 1px solid red;
-}
-.form__validate-elem_success {
+.form__validate-elem_valid {
 	border: 1px solid green;
+}
+.form__validate-elem_invalid {
+	border: 1px solid red;	
 }
 .alert-form {
 	font-size: 14px;
