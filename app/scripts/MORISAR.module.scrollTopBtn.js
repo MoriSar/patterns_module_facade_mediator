@@ -2,6 +2,14 @@
 
 MORISAR.namespace('MORISAR.module.scrollTopBtn');
 
+/**
+ * Модуль кнопки "скролл наверх"
+ * @param  {Object} cfg       - параметры кнопки
+ * @param  {Object} jqObjects - jQuery объекты кнопки и ее текста
+ * @param  {Object} system    - функционал модуля
+ * @param  {Object} behavior  - методы событий модуля
+ * @return {Object}           - фасад модуля
+ */
 MORISAR.module.scrollTopBtn = (function () {
 
 	var cfg = {
@@ -21,17 +29,30 @@ MORISAR.module.scrollTopBtn = (function () {
 	},
 
 	system = {
+		/**
+		 * Изменение параметров кнопки при ее инициализации
+		 * @param {Object} obj - объект изменяемых параметров кнопки
+		 */
 		setCfg: function (obj) {
 			for (var key in obj) {
 				cfg[key] = obj[key];
 			};
 		},
 
+		/**
+		 * Установка ширины кликабельной зоны кнопки
+		 * @param  {Number} val - значение, заданное вручную
+		 * @return {Number}     - значение ширины
+		 */
 		widthBlock: function (val) {
 			var temp = val || $(cfg.container).offset().left;
 			return temp;
 		},
 
+		/**
+		 * Отображение кнопки
+		 * @return {Boolean} - статус отображения кнопки
+		 */
 		showBtn: function () {
 			if (!cfg.clickCaunter) {
 				jqObjects.$btnElem.css({
@@ -48,9 +69,13 @@ MORISAR.module.scrollTopBtn = (function () {
 				cfg.clickCaunter = false;
 				jqObjects.$btnElemText.text('Наверх').removeClass('active');
 				cfg.isShowBtn = true;
-			}
+			};
+			return cfg.isShowBtn;
 		},
 
+		/**
+		 * Проверка контента на предмет минимально разрешенной его ширины для отображения кнопки
+		 */
 		checkWindth: function () {
 			var temp = this.widthBlock();
 			if (temp < cfg.minBtnWidth) {

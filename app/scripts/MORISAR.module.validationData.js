@@ -2,13 +2,27 @@
 
 MORISAR.namespace('MORISAR.module.validationData');
 
+/**
+ * Модуль организации данных валидируемых полей формы
+ * @param  {Object} obj      - объект данных поля формы
+ * @param  {Array}  arr      - массив объектов данных полей формы
+ * @param  {Number} jqLength - количество валидируемых полей формы
+ * @param  {Object} system   - функционал модуля
+ * @return {Object}          - фасад модуля
+ */
 MORISAR.module.validationData = (function () {
 	var obj = {},
 	arr = [],
 	jqLength = 0,
 	system = {
 
+		/**
+		 * Создание объекта элемента формы
+		 * @param  {Object} jq - jQuery объект, селектор класса валидируемых полей формы
+		 * @return {Array}     - массив объектов данных полей формы
+		 */
 		getElems: function (jq) {
+			arr = [];
 			jqLength = jq.length;
 			for (var i = 0; i < jqLength; i++) {
 				
@@ -19,7 +33,7 @@ MORISAR.module.validationData = (function () {
 					elemName: temp.attr('data-elemName'),
 					validationType: temp.attr('data-validationType'),
 					validStatus: false,
-					jqObj: temp
+					jqObj: temp,
 				};
 				arr.push(obj);
 
@@ -27,6 +41,10 @@ MORISAR.module.validationData = (function () {
 			return arr;
 		},
 
+		/**
+		 * Вывести количество валидируемых полей формы
+		 * @return {Number} - количчество валидируемых полей формы
+		 */
 		showElemsLength: function () {
 			return jqLength;
 		}

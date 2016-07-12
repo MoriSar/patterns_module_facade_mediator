@@ -56,6 +56,10 @@ MORISAR.facade.subscribe('Click on scroll button', function (objConfig) {
 
 MORISAR.facade.subscribe('Change in form', function (objConfig) {
 	MORISAR.facade.interface__startValidation(objConfig);
+});
+
+MORISAR.facade.subscribe('Send request', function (objConfig, event) {
+	MORISAR.facade.interface__sendRequest(objConfig, event);
 })
 
 ////////////////////////
@@ -78,6 +82,9 @@ MORISAR.module.scrollTopBtn.stbM__button().on('click', function(event) {
 });
 
 $('.autoParth-box').on('change', function(event) {
-	event.preventDefault();
-	MORISAR.facade.publish('Change in form', {});
+	MORISAR.facade.publish('Change in form', {validationClass: '.form__validate-elem'});
+});
+
+$('.contact-submit').on('click', function(event) {
+	MORISAR.facade.publish('Send request', {validationClass: '.form__validate-elem'}, event);
 });
